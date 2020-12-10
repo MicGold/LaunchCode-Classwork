@@ -1,0 +1,14 @@
+window.addEventListener("load", function(){
+    const fetchPromise = fetch("https://handlers.education.launchcode.org/static/astronauts.json");
+    fetchPromise.then( function(response) {
+        const jsonPromise = response.json();
+        jsonPromise.then( function(json) {
+            console.log("firstName", json.firstName);
+            });
+        
+   });
+});
+
+
+
+
